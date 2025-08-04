@@ -1,12 +1,11 @@
     <!DOCTYPE html>
-    <html lang="<?php get_language_attributes(); ?>">
+    <html <?php language_attributes(); ?>>
 
     <head>
       <?php get_header(); ?>
     </head>
 
-    <body>
-
+    <body <?php body_class(); ?>>
       <!-- Navigation -->
       <?php get_template_part('includes/header'); ?>
 
