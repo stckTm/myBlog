@@ -49,7 +49,20 @@
 
               <!-- Pager -->
               <div class="clearfix">
-                <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+                <?php
+                $link = get_previous_posts_link('&larr; Newer Posts');
+                if ($link) {
+                  $link = str_replace('<a', '<a class="btn btn-primary float-left"', $link);
+                  echo $link;
+                }
+                ?>
+                <?php
+                $link = get_next_posts_link('Older Posts &rarr;');
+                if ($link) {
+                  $link = str_replace('<a', '<a class="btn btn-primary float-right"', $link);
+                  echo $link;
+                }
+                ?>
               </div>
 
             <?php else : ?>

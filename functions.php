@@ -18,6 +18,10 @@ function my_theme_setup()
     'gallery',
     'caption'
   ));
+
+  register_nav_menus([
+    'global_nav' => 'グローバルナビゲーション'
+  ]);
 }
 
 add_action('after_setup_theme', 'my_theme_setup');

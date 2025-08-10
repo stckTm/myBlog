@@ -8,6 +8,15 @@
             Menu
             <i class="fas fa-bars"></i>
         </button>
+        <?php
+        $menu_name = 'global_nav';
+        if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {
+            $menu = wp_get_nav_menu_object($locations[$menu_name]);
+        };
+        var_dump($menu);
+        $menu_items = wp_get_nav_menu_items($menu->$term_id);
+        var_dump($menu_items);
+        ?>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
